@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe275;
+package com.nano.softz;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

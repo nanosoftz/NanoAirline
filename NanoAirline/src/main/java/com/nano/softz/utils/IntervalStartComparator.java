@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe275.utils;
+package com.nano.softz.utils;
 
 import org.joda.time.Interval;
 

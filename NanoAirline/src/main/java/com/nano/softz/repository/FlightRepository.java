@@ -1,7 +1,8 @@
-package edu.sjsu.cmpe275.repository;
+package com.nano.softz.repository;
 
-import edu.sjsu.cmpe275.model.Flight;
 import org.springframework.data.repository.CrudRepository;
+
+import com.nano.softz.model.Flight;
 
 import javax.transaction.Transactional;
 

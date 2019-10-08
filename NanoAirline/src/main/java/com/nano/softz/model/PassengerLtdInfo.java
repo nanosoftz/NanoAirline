@@ -1,71 +1,44 @@
-package edu.sjsu.cmpe275.model;
+package com.nano.softz.model;
 
 
-import com.fasterxml.jackson.annotation.JsonInclude;
-import org.hibernate.annotations.GenericGenerator;
-
-import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
-import java.util.List;
-
 
 /**
- * The type Passenger.
+ * The type Passenger ltd info.
  */
 @XmlRootElement
-@JsonInclude(JsonInclude.Include.NON_NULL)
-@Entity
-@Table(name = "passenger")
-public class Passenger {
+public class PassengerLtdInfo {
 
-
-    @Id
-    @GeneratedValue(generator = "uuid")
-    @GenericGenerator(name = "uuid", strategy = "uuid2")
-    @Column
     private String id;
 
-    @Column(name = "first_name")
     private String firstname;
 
-    @Column(name = "last_name")
     private String lastname;
 
-    @Column
     private int age;
 
-    @Column
     private String gender;
 
-    // The uniqueness of phone numbers must be enforced.
-    @Column(unique = true)
     private String phone;
 
-    // reservation made by the passenger should also be deleted.
-    @OneToMany(mappedBy = "passengerFKey", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Reservation> reservations;
-
     /**
-     * Instantiates a new Passenger.
+     * Instantiates a new Passenger ltd info.
      */
-    public Passenger() {
+    public PassengerLtdInfo() {
     }
 
     /**
-     * Instantiates a new Passenger.
+     * Instantiates a new Passenger ltd info.
      *
-     * @param firstname the firstname
-     * @param lastname  the lastname
-     * @param age       the age
-     * @param gender    the gender
-     * @param phone     the phone
+     * @param passenger the passenger
      */
-    public Passenger(String firstname, String lastname, int age, String gender, String phone) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.age = age;
-        this.gender = gender;
-        this.phone = phone;
+    public PassengerLtdInfo(Passenger passenger){
+        this.id = passenger.getId();
+        this.firstname = passenger.getFirstname();
+        this.lastname = passenger.getLastname();
+        this.age = passenger.getAge();
+        this.gender = passenger.getGender();
+        this.phone = passenger.getPhone();
     }
 
     /**
@@ -174,24 +147,6 @@ public class Passenger {
      */
     public void setPhone(String phone) {
         this.phone = phone;
-    }
-
-    /**
-     * Gets reservations.
-     *
-     * @return the reservations
-     */
-    public List<Reservation> getReservations() {
-        return reservations;
-    }
-
-    /**
-     * Sets reservations.
-     *
-     * @param reservations the reservations
-     */
-    public void setReservations(List<Reservation> reservations) {
-        this.reservations = reservations;
     }
 
 }

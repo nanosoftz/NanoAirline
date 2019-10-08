@@ -1,10 +1,11 @@
-package edu.sjsu.cmpe275.repository;
+package com.nano.softz.repository;
 
 
-import edu.sjsu.cmpe275.model.Reservation;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+
+import com.nano.softz.model.Reservation;
 
 import javax.transaction.Transactional;
 import java.util.List;

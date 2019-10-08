@@ -1,9 +1,10 @@
-package edu.sjsu.cmpe275.repository;
+package com.nano.softz.repository;
 
-import edu.sjsu.cmpe275.model.Passenger;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
+
+import com.nano.softz.model.Passenger;
 
 import javax.transaction.Transactional;
 

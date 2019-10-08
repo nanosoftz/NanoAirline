@@ -1,15 +1,16 @@
-package edu.sjsu.cmpe275.controller;
+package com.nano.softz.controller;
 
 
-import edu.sjsu.cmpe275.model.*;
-import edu.sjsu.cmpe275.repository.FlightRepository;
-import edu.sjsu.cmpe275.repository.PassengerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import com.nano.softz.model.*;
+import com.nano.softz.repository.FlightRepository;
+import com.nano.softz.repository.PassengerRepository;
 
 import javax.transaction.Transactional;
 import java.util.ArrayList;

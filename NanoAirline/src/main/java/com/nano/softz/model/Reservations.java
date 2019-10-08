@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe275.model;
+package com.nano.softz.model;
 
 
 import javax.xml.bind.annotation.XmlRootElement;

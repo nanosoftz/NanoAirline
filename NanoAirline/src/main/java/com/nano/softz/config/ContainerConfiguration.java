@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe275.config;
+package com.nano.softz.config;
 
 import org.apache.catalina.Context;
 import org.apache.catalina.connector.Connector;
